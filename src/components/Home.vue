@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Holocore',
+  name: 'Home',
   props: {
     msg: String
   }
