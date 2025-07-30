@@ -1,12 +1,12 @@
-import Home from "./components/Home.vue";
+import HomeView from "./components/Home.vue";
 import SignUp from "./components/SignUp.vue";
-import Login from "./components/Login.vue";
+import LoginPage from "./components/Login.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes=[
     {
         name:'Home',
-        component:Home,
+        component:HomeView,
         path:'/'
     },
     {
@@ -16,7 +16,7 @@ const routes=[
     },
     {
         name:'Login',
-        component:Login,
+        component:LoginPage,
         path:'/login'
     }
 ];

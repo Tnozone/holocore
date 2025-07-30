@@ -7,9 +7,9 @@
 <script>
 export default {
   name: 'App',
-  components: {
-    Home, SignUp
-  }
+  // components: {
+  //   Home, SignUp
+  // }
 }
 </script>
 
