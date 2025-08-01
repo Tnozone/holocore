@@ -20,7 +20,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .register input, .login input {
@@ -37,9 +41,12 @@ export default {
 .register button, .login button {
   width: 320px;
   height: 40px;
-  border: 1px solid skyblue;
   background: skyblue;
   color: #fff;
   cursor: pointer;
+}
+
+.navbar {
+  background-color: #1c832b;
 }
 </style>

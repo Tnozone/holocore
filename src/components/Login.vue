@@ -3,7 +3,7 @@
     <div class="col login">
         <input type="text" name="email" v-model="email" placeholder="Enter Email">
         <input type="text" name="password" v-model="password" placeholder="Password">
-        <button v-on:click="login">Login</button>
+        <button class="btn" v-on:click="login">Login</button>
     </div>
     <p>
         <router-link to="/register">No Account? Sign Up</router-link>

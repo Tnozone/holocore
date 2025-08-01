@@ -1,15 +1,20 @@
 <template>
   <div class="card">
+    <Header />
     <h1>{{ msg }}</h1>
     <p>
-      Wellcome to Holocore, the site for
+      Welcome to Holocore, the site for
     </p>
   </div>
 </template>
 
 <script>
+import Header from './Header.vue';
 export default {
   name: 'HomeView',
+  components: {
+    Header,
+  },
   props: {
     msg: String
   },
