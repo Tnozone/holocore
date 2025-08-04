@@ -1,28 +1,23 @@
 <template>
   <div class="card">
     <Header />
-    <h1>Hello {{ name }}</h1>
-    <p>
-      Welcome to Holocore, the site for
-    </p>
+    <div class="card-header">
+      <p>
+        Add a
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from './Header.vue';
 export default {
-  name: 'HomeView',
-  data() {
-    return {
-      name:''
-    }
-  },
+  name: 'Add',
   components: {
     Header,
   },
   mounted() {
         let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user.name);
         if(!user) {
             this.$router.push({name:'SignUp'});
         }

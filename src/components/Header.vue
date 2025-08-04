@@ -2,13 +2,13 @@
 <div class="navbar">
      <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <router-link class="nav-link" to="/">Home</router-link>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Add</a>
+            <router-link class="nav-link" to="/add">Add</router-link>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Update</a>
+            <router-link class="nav-link" to="/update">Update</router-link>
         </li>
         <li class="nav-item">
             <a class="nav-link" v-on:click="logout" href="#">Logout</a>
