@@ -3,16 +3,27 @@
     <Header />
     <h1>Hello {{ name }}</h1>
     <p>
-      Welcome to Holocore, the site for
+      Welcome to Holocore, the site for learning how to make perform basic first aid.
     </p>
     <table class="table">
-      <tr v-for="item in list" :key="item.id">
-        <td>{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.job }}</td>
-        <td>{{ item.contact }}</td>
-        <td>{{ item.city }}</td>
-      </tr>
+      <thead class="thead-dark">
+        <tr>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Job</td>
+          <td>Contact</td>
+          <td>City</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in list" :key="item.id">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.job }}</td>
+          <td>{{ item.contact }}</td>
+          <td>{{ item.city }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
