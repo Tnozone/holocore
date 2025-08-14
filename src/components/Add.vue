@@ -40,6 +40,7 @@
 
 <script>
 import Header from './Header.vue';
+import axios from 'axios';
 export default {
   name: 'Add',
   components: {
@@ -58,8 +59,20 @@ export default {
     }
   },
   methods: {
-    addRecepe() {
+    async addRecepe() {
       console.log(this.recepe)
+      const result = await axios.post("http://localhost:3000/recepe",{
+        name:this.recepe.name,
+        recepe:this.recepe.recepe,
+        type:this.recepe.type,
+        price:this.recepe.price,
+        ingredients:this.recepe.ingredients,
+        instructions:this.recepe.instructions,
+      });
+      if (result==201) {
+        this.$router.push({name:'Home'});
+      }
+      console.warn("result", result)
     }
   },
   mounted() {
