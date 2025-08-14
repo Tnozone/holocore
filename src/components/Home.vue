@@ -3,25 +3,27 @@
     <Header />
     <h1>Hello {{ name }}</h1>
     <p>
-      Welcome to Holocore, the site for learning how to make perform basic first aid.
+      Welcome to Holocore, the site for uploading basic low-budget recepes for others.
     </p>
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <td>ID</td>
+          <td>Recepe</td>
           <td>Name</td>
-          <td>Job</td>
-          <td>Contact</td>
-          <td>City</td>
+          <td>Type</td>
+          <td>Estimated Price</td>
+          <td>Ingredients</td>
+          <td>Instructions</td>
         </tr>
       </thead>
       <tbody>
         <tr v-for="item in list" :key="item.id">
-          <td>{{ item.id }}</td>
+          <td>{{ item.recepe }}</td>
           <td>{{ item.name }}</td>
-          <td>{{ item.job }}</td>
-          <td>{{ item.contact }}</td>
-          <td>{{ item.city }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.ingredients }}</td>
+          <td>{{ item.instructions }}</td>
         </tr>
       </tbody>
     </table>
