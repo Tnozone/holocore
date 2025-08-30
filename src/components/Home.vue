@@ -14,6 +14,7 @@
           <td>Estimated Price</td>
           <td>Ingredients</td>
           <td>Instructions</td>
+          <td>Actions</td>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +25,7 @@
           <td>{{ item.price }}</td>
           <td>{{ item.ingredients }}</td>
           <td>{{ item.instructions }}</td>
+          <td><router-link :to="'/update/'+item.id">Update</router-link></td>
         </tr>
       </tbody>
     </table>
@@ -31,6 +33,7 @@
 </template>
 
 <script>
+import router from '@/routers';
 import Header from './Header.vue';
 import axios from 'axios';
 export default {
