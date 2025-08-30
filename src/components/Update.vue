@@ -40,6 +40,7 @@
 
 <script>
 import Header from './Header.vue';
+import axios from 'axios';
 export default {
   name: 'Update',
   components: {
@@ -57,11 +58,16 @@ export default {
       }
     }
   },
-  mounted() {
-        let user = localStorage.getItem('user-info');
-        if(!user) {
-            this.$router.push({name:'SignUp'});
-        }
+  async mounted() {
+      let user = localStorage.getItem('user-info');
+      if(!user) {
+        this.$router.push({name:'SignUp'});
+      }
+
+      const result = await axios.get('http://localhost:3000/recepe/'+this.$route.params.id)
+      // console.warn(this.$route.params.id)
+      console.warn(result)
+      this.recepe=result.data
     }
 }
 </script>

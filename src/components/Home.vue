@@ -18,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in list" :key="item.id">
+        <tr v-for="item in recepe" :key="item.id">
           <td>{{ item.recepe }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.type }}</td>
@@ -54,7 +54,7 @@ export default {
           this.$router.push({name:'SignUp'});
       }
 
-      let result = await axios.get('http://localhost:3000/list');
+      let result = await axios.get('http://localhost:3000/recepe');
       this.list = result.data;
     }
 }
